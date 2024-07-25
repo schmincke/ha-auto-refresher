@@ -58,7 +58,7 @@ This script automatically refreshes your Home Assistant view after a set period 
    - When you make changes to the script, you need to increment the version number in the URL by one (e.g., `/local/ha-auto-refresher.js?v=2`).
    - Reload your lovelace to apply the changes. Home Assistant only recognizes changes in the file if the version number is updated.
 
-### Example Usage
+### Alterantive Way To Include Script
 
 ```yaml
 views:
