@@ -23,9 +23,9 @@ This script automatically refreshes your Home Assistant view after a set period 
 ### Create a Long-Lived Access Token in Home Assistant
 
 1. Go to your Home Assistant profile by clicking on your user icon in the bottom left corner.
-   ![Home Assistant Profile](screenshots/profile.png)
+   ![Home Assistant Profile](screenshots/profile_security.png)
 2. Scroll down to the "Long-Lived Access Tokens" section.
-   ![Long-Lived Access Tokens](screenshots/long_lived_tokens.png)
+   ![Long-Lived Access Tokens](screenshots/long_lived_token.png)
 3. Click on "Create Token".
 4. Enter a name for your token, for example, "HA Auto Refresher".
 5. Click "OK" and copy the generated token. **Save this token in a secure place**, as you will not be able to view it again.
@@ -34,13 +34,13 @@ This script automatically refreshes your Home Assistant view after a set period 
 ### Create a Toggle Helper in Home Assistant
 
 1. Go to Configuration > Helpers.
-   ![Helpers Configuration](screenshots/helper_menu.png)
+   ![Helpers Configuration](screenshots/helper.png)
 2. Click on the "+" button to add a new helper.
 3. Select "Toggle" as the type of helper.
 4. Enter "refresh" as the name.
 5. Optionally, you can enter a description.
 6. Click "Create".
-   ![Create Toggle Helper](screenshots/create_helper.png)
+   ![Create Toggle Helper](screenshots/create_toggle.png)
 
 ### Include the Script in Your Dashboard
 
