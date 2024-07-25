@@ -34,7 +34,7 @@ This script automatically refreshes your Home Assistant view after a set period 
 ### Create a Toggle Helper in Home Assistant
 
 1. Go to Configuration > Helpers.
-   ![Helpers Configuration](screenshots/helper.png)
+   ![Helpers Configuration](screenshots/helper_menu.png)
 2. Click on the "+" button to add a new helper.
 3. Select "Toggle" as the type of helper.
 4. Enter "refresh" as the name.
