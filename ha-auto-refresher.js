@@ -9,7 +9,7 @@ const LOG_PREFIX = 'HA AUTO REFRESHER V1.3';
 const REFRESH_TIME = 600000; // Go Back to /home/ after 10 minutes
 const CHECK_INTERVAL = 60000; // Check for change of HELPER Variable every: 1 minute
 const refreshEntityId = 'input_boolean.refresh'; // Entity ID in Home Assistant for the refresh boolean -> Create Helper -> Toggle > "refresh" as name
-const token = '<INTPUT YOUR HA API TOKEN HERE>'; // Replace with your actual token Created in Home Assistant Profile > Securite > Create Token (then paste in here)
+const token = 'YOUR_LONG_LIVED_ACCESS_TOKEN'; // Replace with your actual token Created in Home Assistant Profile > Security > Create Token (then paste in here)
 
 async function getRefreshState() {
     const response = await fetch('/api/states/' + refreshEntityId, {
@@ -25,7 +25,8 @@ async function getRefreshState() {
 async function initialize() {
     let shouldRefresh = await getRefreshState();
     console.log(`%c${LOG_PREFIX}: %cReload script loaded now V1.1. Refresh mode is currently ${shouldRefresh ? 'ON' : 'OFF'}.`, 'background: white; color: black; font-weight: bold;', 'background: red; color: white; font-weight: bold;');
-    
+    console.log(`%c${LOG_PREFIX}: %cCurrent Refresh Time: ${REFRESH_TIME / 1000} seconds. Current Helper Re-Check: ${CHECK_INTERVAL / 1000} seconds.`, 'background: white; color: black; font-weight: bold;', 'background: red; color: white; font-weight: bold;');
+
     async function checkAndUpdate() {
         shouldRefresh = await getRefreshState();
         console.log(`%c${LOG_PREFIX}: %cPeriodic Status Check: Refresh mode is currently ${shouldRefresh ? 'ON' : 'OFF'}. Will check again in ${CHECK_INTERVAL / 1000} seconds.`, 'background: white; color: black; font-weight: bold;', 'background: red; color: white; font-weight: bold;');
